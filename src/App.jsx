@@ -3,8 +3,8 @@ import Footer from "./components/Footer";
 import ArticleList from "./components/ArticleList";
 function App() {
   const data = {
-    username: "mig",
-    email: "mig@me.com",
+    username: "Katja",
+    email: "katjahvidkrogh@gmail.com",
     articles: [
       { header: "Hello World", content: "This is my first article" },
       { header: "Hello World 2", content: "This is my second article" },
@@ -16,9 +16,9 @@ function App() {
   };
   return (
     <>
-      <Header />
-      <ArticleList />
-      <Footer />
+      <Header username={data.username} email={data.email}/>
+      <ArticleList/>
+      <Footer contactInfo={data.contactInfo.email}/>
     </>
   );
 }
